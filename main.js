@@ -52,6 +52,15 @@ function canCalculate() {
   }
 }
 
+function del(string) {
+  string = string.split("");
+  string.pop();
+  string = string.join("");
+  return string;
+}
+
+del("007");
+
 // Event listeners
 
 // Numbers
@@ -103,6 +112,18 @@ for (let i = 0; i < specialOperatorButtons.length; i++) {
         num1.innerText = "";
         operator.innerText = "";
         num2.innerText = "";
+      });
+      break;
+
+    case "del":
+      thisButton.addEventListener("click", () => {
+        if (num2.innerText) {
+          num2.innerText = del(num2.innerText);
+        } else if (operator.innerText) {
+          operator.innerText = del(operator.innerText);
+        } else if (num1.innerText) {
+          num1.innerText = del(num1.innerText);
+        }
       });
       break;
   }
