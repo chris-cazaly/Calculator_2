@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body{
@@ -25,5 +26,20 @@ body{
 }
 .size-triple {
     width: 300px;
+}
+
+button {
+    background-color: white;
+    border: none;
+    font-size: 1.5em;
+    color: rgb(58, 58, 58)
+}
+
+button:hover {
+    background-color: rgb(198, 198, 198);
+}
+
+button:active {
+    background-color: gray;
 }
 
