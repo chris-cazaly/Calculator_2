@@ -18,6 +18,12 @@ body {
   display: flex;
 }
 
+.display {
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: white;
+}
+
 .size-single {
   width: 100px;
 }
@@ -55,4 +61,8 @@ button:active {
 .operator-button:active {
     background-color: rgb(139, 88, 34)
 
+}
+
+.display-text {
+    margin: auto 5px;
 }
