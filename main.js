@@ -14,10 +14,41 @@ let isNum1 = true;
 // Functions
 
 function checkIsNum1() {
-  if ((operator.innerText == "")) {
+  if (operator.innerText == "") {
     isNum1 = true;
   } else {
     isNum1 = false;
+  }
+}
+
+function calculate(number1, thisOperator, number2) {
+  number1 = parseInt(number1, 10);
+  number2 = parseInt(number2, 10);
+
+  switch (thisOperator) {
+    case "+":
+      return (number1 + number2).toString();
+      break;
+
+    case "-":
+      return (number1 - number2).toString();
+      break;
+
+    case "/":
+      return (number1 / number2).toString();
+      break;
+
+    case "*":
+      return (number1 * number2).toString();
+      break;
+  }
+}
+
+function canCalculate() {
+  if (num1.innerText && operator.innerText && num2.innerText) {
+    return true;
+  } else {
+    return false;
   }
 }
 
@@ -41,9 +72,30 @@ for (let i = 0; i < numberButtons.length; i++) {
 // Math operators
 for (let i = 0; i < mathOperatorButtons.length; i++) {
   const thisButton = mathOperatorButtons[i];
-  console.log(thisButton.innerText);
 
   thisButton.addEventListener("click", () => {
     operator.innerText = thisButton.innerText;
   });
+}
+
+// Special operators
+for (let i = 0; i < specialOperatorButtons.length; i++) {
+  const thisButton = specialOperatorButtons[i];
+  const thisOperator = thisButton.innerText;
+
+  switch (thisOperator) {
+    case "=":
+      thisButton.addEventListener("click", () => {
+        if (canCalculate()) {
+          num1.innerText = calculate(
+            num1.innerText,
+            operator.innerText,
+            num2.innerText
+          );
+          operator.innerText = "";
+          num2.innerText = "";
+        }
+      });
+      break;
+  }
 }
