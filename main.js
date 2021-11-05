@@ -97,5 +97,13 @@ for (let i = 0; i < specialOperatorButtons.length; i++) {
         }
       });
       break;
+
+    case "clear":
+      thisButton.addEventListener("click", () => {
+        num1.innerText = "";
+        operator.innerText = "";
+        num2.innerText = "";
+      });
+      break;
   }
 }
