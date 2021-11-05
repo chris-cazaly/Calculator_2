@@ -1,45 +1,58 @@
 * {
-    box-sizing: border-box;
-    font-family: sans-serif;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-body{
-    background-color: lightslategray;
+body {
+  background-color: lightslategray;
 }
 
 .calculator {
-    width: 400px;
-    margin: 100px auto;
-    background-color:rgb(63, 63, 63); 
+  width: 400px;
+  margin: 100px auto;
+  background-color: rgb(63, 63, 63);
 }
 
 .row {
-    height: 80px;
-    display: flex;
+  height: 80px;
+  display: flex;
 }
 
 .size-single {
-    width: 100px;
+  width: 100px;
 }
 .size-double {
-    width: 200px;
+  width: 200px;
 }
 .size-triple {
-    width: 300px;
+  width: 300px;
 }
 
 button {
-    background-color: white;
-    border: none;
-    font-size: 1.5em;
-    color: rgb(58, 58, 58)
+  background-color: white;
+  border: none;
+  font-size: 1.5em;
+  color: rgb(58, 58, 58);
 }
 
 button:hover {
-    background-color: rgb(198, 198, 198);
+  background-color: rgb(198, 198, 198);
 }
 
 button:active {
-    background-color: gray;
+  background-color: gray;
 }
 
+.operator-button {
+  background-color: rgb(233, 151, 63);
+  color: white;
+}
+
+.operator-button:hover {
+    background-color: rgb(182, 116, 45)
+
+}
+.operator-button:active {
+    background-color: rgb(139, 88, 34)
+
+}
